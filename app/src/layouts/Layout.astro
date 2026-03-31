@@ -1,0 +1,112 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+const jsonLdPerson = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "최지원",
+  "alternateName": "Choi Jiwon",
+  "jobTitle": "IT 교육 강사 / AI 전문 강사",
+  "description": "복잡한 코딩과 낯선 AI를 일상의 다정한 대화로 풀어내는 IT 교육 전문가",
+  "email": "one@oneground.ai.kr",
+  "telephone": "010-2447-6990",
+  "url": "https://oneground.ai.kr",
+  "sameAs": [
+    "https://github.com/wonguwon",
+    "http://www.youtube.com/@mentor_oneground"
+  ],
+  "knowsAbout": [
+    "Java", "Python", "SQL", "머신러닝", "생성형 AI", "LLM API", "AX 교육", "기업 특강", "개발자 멘토링"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "정보통신학 전공 대학교"
+  },
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "정보통신학 공학사" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "직업훈련교사 정보기술개발 3급" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "직업훈련교사 정보기술 전략계획 3급" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "정보처리기사" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "SQLD" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate", "name": "AICE Associate" }
+  ]
+};
+
+const jsonLdFAQ = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "지식 전달자 최지원의 교육 철학은 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "최지원 강사의 교육 철학은 세 가지 원칙으로 이루어집니다. 첫째, 어려운 것을 쉽게: 초보자의 눈높이에서 낯선 용어의 장벽을 허뭅니다. 둘째, 쉬운 것을 재미있게: 기술이 내 삶을 어떻게 바꾸는지 생생한 예시로 들려줍니다. 셋째, 재미있는 것을 깊이 있게: 재미를 넘어 실무에서 바로 써먹을 수 있는 단단한 실력을 만듭니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "최지원 강사의 주요 강의 분야는 어떻게 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "최지원 강사는 세 가지 주요 분야에서 강의합니다. 개발 분야(Java, Python, DB/SQL), AI 분야(머신러닝, 생성형 AI, LLM API 활용), AX(AI Transformation) 분야(업무 자동화, 기업 AX 교육)입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "최지원 강사의 실무 개발 및 교육 경력은 어떻게 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "개발 경력으로는 스타트업 0→1 서비스 개발, React/Spring 기반 CRM 시스템 구축, AI 에이전트 솔루션 개발, PM 및 Tech Lead 역할을 수행했습니다. 교육 경력으로는 KDT 과정 120명 이상 수료생 배출, 현대중공업·한솔그룹 기업 특강, 정보통신연합회 멘토, 프로그래머스·해커스 강사로 활동했습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "최지원 강사에게 강의 문의는 어떻게 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "이메일(one@oneground.ai.kr) 또는 전화(010-2447-6990)로 문의하실 수 있습니다. 기업 특강, 부트캠프 강의, AI/AX 교육 등 다양한 형태의 강의 제안을 환영합니다."
+      }
+    }
+  ]
+};
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="keywords" content="최지원 강사, IT 교육, AI 강의, AX 교육, 생성형 AI, 기업 특강, 개발자 멘토링, Java 강의, Python 강의, LLM API, 부트캠프 강사" />
+  <meta name="author" content="최지원" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:site_name" content="최지원 강사 | 지식 전달자" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <link rel="canonical" href="https://oneground.ai.kr" />
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdPerson)} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdFAQ)} />
+
+  <title>{title}</title>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+  <slot />
+</body>
+</html>
