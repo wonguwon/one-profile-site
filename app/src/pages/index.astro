@@ -324,22 +324,23 @@ import bgPhoto from '../assets/bg.jpg';
 
       <!-- Dev Career -->
       <div>
-        <div class="flex items-center gap-2 mb-6">
+        <div class="flex items-center gap-2 mb-5">
           <span class="text-xs font-bold text-teal-600 tracking-widest uppercase">개발</span>
           <span class="flex-1 h-px bg-gray-100"></span>
         </div>
-        <ul class="space-y-3">
+        <ul class="space-y-2">
           {[
-            "스타트업 초기 멤버 합류 및 50인 규모 조직 성장 주도 (0 to 1 빌딩)",
-            "서비스 기획부터 설계, 배포, 운영까지 라이프사이클 전 과정 경험",
-            "React, Spring 기반 피트니스 CRM 서비스 개발 및 운영",
-            "AI 에이전트 기반 무인 공간 관리 솔루션 구축",
-            "광명청년창업센터, 대한피트니스경영자협회 등 공공·민간 웹 외주 개발 다수",
-            "개발팀장(Team Lead) 및 프로젝트 매니저(PM) 업무 수행"
+            { text: "스타트업 초기 멤버 합류 및 50인 규모 조직 성장 주도 (0 to 1 빌딩)", tag: "0→1" },
+            { text: "서비스 기획부터 설계, 배포, 운영까지 라이프사이클 전 과정 경험",    tag: "Full-Stack" },
+            { text: "React, Spring 기반 피트니스 CRM 서비스 개발 및 운영",               tag: "CRM" },
+            { text: "AI 에이전트 기반 무인 공간 관리 솔루션 구축",                        tag: "AI/LLM" },
+            { text: "광명청년창업센터, 대한피트니스경영자협회 등 공공·민간 웹 외주 개발 다수", tag: "외주" },
+            { text: "개발팀장(Team Lead) 및 프로젝트 매니저(PM) 업무 수행",              tag: "PM / Lead" }
           ].map((item) => (
-            <li class="flex items-start gap-3">
-              <span class="mt-[0.4rem] w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>
-              <p class="text-sm text-gray-700 leading-relaxed">{item}</p>
+            <li class="flex items-start gap-3 py-2.5 border-b border-gray-50 last:border-0">
+              <span class="mt-[0.35rem] w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>
+              <p class="flex-1 text-sm text-gray-700 leading-relaxed">{item.text}</p>
+              <span class="mt-0.5 flex-shrink-0 text-[0.65rem] px-2 py-0.5 bg-teal-50 text-teal-700 rounded-full font-semibold">{item.tag}</span>
             </li>
           ))}
         </ul>
@@ -347,22 +348,23 @@ import bgPhoto from '../assets/bg.jpg';
 
       <!-- Education Career -->
       <div>
-        <div class="flex items-center gap-2 mb-6">
+        <div class="flex items-center gap-2 mb-5">
           <span class="text-xs font-bold text-blue-600 tracking-widest uppercase">교육</span>
           <span class="flex-1 h-px bg-gray-100"></span>
         </div>
-        <ul class="space-y-3">
+        <ul class="space-y-2">
           {[
-            "KDT 및 국가기간전략산업훈련 교강사 7개 과정, 교강사 평점 평균 4.8점 이상 (2023~2026)",
-            "IT 전공 및 비전공 수료생 120명 이상 배출 및 커리어 멘토링",
-            "현대중공업, 한솔그룹 등 주요 기업 대상 AI 활용 및 AX(AI 전환) 교육 진행",
-            "프로그래머스, 해커스 HRD 등 다양한 기관에서의 온라인 강의 진행",
-            "정보통신연합회 비전공자를 위한 현실적인 개발자 취업 가이드 특강",
-            "정보통신연합회 한이음 드림업 멘토 및 자문위원"
+            { text: "KDT 및 국가기간전략산업훈련 교강사 7개 과정, 교강사 평점 평균 4.8점 이상 (2023~2026)", tag: "KDT" },
+            { text: "IT 전공 및 비전공 수료생 120명 이상 배출 및 커리어 멘토링",                            tag: "멘토링" },
+            { text: "현대중공업, 포스코DX, 한솔그룹 등 주요 기업 대상 AI 활용 및 AX(AI 전환) 교육 진행",  tag: "기업특강" },
+            { text: "프로그래머스, 해커스 HRD 등 다양한 기관에서의 온라인 강의 진행",                      tag: "플랫폼" },
+            { text: "정보통신연합회 비전공자를 위한 현실적인 개발자 취업 가이드 특강",                      tag: "특강" },
+            { text: "정보통신연합회 한이음 드림업 멘토 및 자문위원",                                       tag: "자문" }
           ].map((item) => (
-            <li class="flex items-start gap-3">
-              <span class="mt-[0.4rem] w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
-              <p class="text-sm text-gray-700 leading-relaxed">{item}</p>
+            <li class="flex items-start gap-3 py-2.5 border-b border-gray-50 last:border-0">
+              <span class="mt-[0.35rem] w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+              <p class="flex-1 text-sm text-gray-700 leading-relaxed">{item.text}</p>
+              <span class="mt-0.5 flex-shrink-0 text-[0.65rem] px-2 py-0.5 bg-blue-50 text-blue-700 rounded-full font-semibold">{item.tag}</span>
             </li>
           ))}
         </ul>
