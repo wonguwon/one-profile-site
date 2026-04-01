@@ -18,7 +18,7 @@ const jsonLdPerson = {
   "url": "https://oneground.ai.kr",
   "sameAs": [
     "https://github.com/wonguwon",
-    "http://www.youtube.com/@mentor_oneground"
+    "https://www.youtube.com/@mentor_oneground"
   ],
   "knowsAbout": [
     "Java", "Python", "SQL", "머신러닝", "생성형 AI", "LLM API", "AX 교육", "기업 특강", "개발자 멘토링"
@@ -33,7 +33,8 @@ const jsonLdPerson = {
     { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "직업훈련교사 정보기술 전략계획 3급" },
     { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "정보처리기사" },
     { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "SQLD" },
-    { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate", "name": "AICE Associate" }
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate", "name": "AICE Associate" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate", "name": "NVIDIA DLI — Mastering LLM Optimization with RAG & Prompt Engineering" }
   ]
 };
 
@@ -87,14 +88,19 @@ const jsonLdFAQ = {
   <meta name="robots" content="index, follow" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://oneground.ai.kr" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://oneground.ai.kr/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="ko_KR" />
   <meta property="og:site_name" content="최지원 강사 | 지식 전달자" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="https://oneground.ai.kr/og-image.jpg" />
 
   <link rel="canonical" href="https://oneground.ai.kr" />
 
