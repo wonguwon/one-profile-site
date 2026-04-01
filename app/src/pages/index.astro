@@ -325,41 +325,21 @@ import bgPhoto from '../assets/bg.jpg';
       <!-- Dev Career -->
       <div>
         <div class="flex items-center gap-2 mb-6">
-          <span class="text-xs font-bold text-teal-600 tracking-widest uppercase">개발 경력</span>
+          <span class="text-xs font-bold text-teal-600 tracking-widest uppercase">개발</span>
           <span class="flex-1 h-px bg-gray-100"></span>
         </div>
-        <ul class="space-y-4">
+        <ul class="space-y-3">
           {[
-            {
-              title: "스타트업 초기 멤버 합류 및 성장 주도",
-              desc: "0 to 1 빌딩, 50인 규모 조직 성장 주도. 서비스 기획·설계·배포·운영 전 과정 담당.",
-              tag: "0→1"
-            },
-            {
-              title: "React · Spring 피트니스 CRM 개발",
-              desc: "엔터프라이즈급 고객 관계 관리 시스템 설계 및 운영.",
-              tag: "Full-Stack"
-            },
-            {
-              title: "AI 에이전트 무인 공간 관리 솔루션",
-              desc: "LLM 기반 업무 자동화 에이전트 아키텍처 설계 및 구축.",
-              tag: "AI/LLM"
-            },
-            {
-              title: "공공·민간 웹 외주 개발 다수",
-              desc: "광명청년창업센터, 대한피트니스경영자협회 등 프로젝트 PM 및 Tech Lead.",
-              tag: "PM / Lead"
-            }
+            "스타트업 초기 멤버 합류 및 50인 규모 조직 성장 주도 (0 to 1 빌딩)",
+            "서비스 기획부터 설계, 배포, 운영까지 라이프사이클 전 과정 경험",
+            "React, Spring 기반 피트니스 CRM 서비스 개발 및 운영",
+            "AI 에이전트 기반 무인 공간 관리 솔루션 구축",
+            "광명청년창업센터, 대한피트니스경영자협회 등 공공·민간 웹 외주 개발 다수",
+            "개발팀장(Team Lead) 및 프로젝트 매니저(PM) 업무 수행"
           ].map((item) => (
-            <li class="flex items-start gap-4 group">
-              <span class="mt-1.5 w-2 h-2 rounded-full border-2 border-teal-400 flex-shrink-0 group-hover:bg-teal-400 transition-colors"></span>
-              <div>
-                <div class="flex items-start gap-2 flex-wrap">
-                  <p class="text-sm font-semibold text-gray-900">{item.title}</p>
-                  <span class="text-[0.65rem] px-2 py-0.5 bg-teal-50 text-teal-700 rounded-full font-semibold flex-shrink-0">{item.tag}</span>
-                </div>
-                <p class="text-xs text-gray-500 mt-1 leading-relaxed">{item.desc}</p>
-              </div>
+            <li class="flex items-start gap-3">
+              <span class="mt-[0.4rem] w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>
+              <p class="text-sm text-gray-700 leading-relaxed">{item}</p>
             </li>
           ))}
         </ul>
@@ -368,46 +348,21 @@ import bgPhoto from '../assets/bg.jpg';
       <!-- Education Career -->
       <div>
         <div class="flex items-center gap-2 mb-6">
-          <span class="text-xs font-bold text-blue-600 tracking-widest uppercase">교육 경력</span>
+          <span class="text-xs font-bold text-blue-600 tracking-widest uppercase">교육</span>
           <span class="flex-1 h-px bg-gray-100"></span>
         </div>
-        <ul class="space-y-4">
+        <ul class="space-y-3">
           {[
-            {
-              title: "KDT 국가기간전략산업훈련 교강사",
-              desc: "7개 과정 운영, IT 전공·비전공 수료생 120명 이상 배출 및 커리어 멘토링 (2023–2026).",
-              tag: "KDT"
-            },
-            {
-              title: "현대중공업 임직원 특강",
-              desc: "생성형 AI 및 AX(AI 전환) 전략 기업 특강 진행.",
-              tag: "기업특강"
-            },
-            {
-              title: "한솔그룹 임직원 교육",
-              desc: "AI 업무 활용 및 디지털 전환 역량 강화 교육.",
-              tag: "기업교육"
-            },
-            {
-              title: "정보통신연합회 한이음 드림업",
-              desc: "비전공자 개발자 취업 가이드 특강, 멘토 및 자문위원 활동.",
-              tag: "멘토링"
-            },
-            {
-              title: "프로그래머스 · 해커스 HRD 강사",
-              desc: "온·오프라인 플랫폼 정규 강의 운영.",
-              tag: "플랫폼"
-            }
+            "KDT 및 국가기간전략산업훈련 교강사 7개 과정, 교강사 평점 평균 4.8점 이상 (2023~2026)",
+            "IT 전공 및 비전공 수료생 120명 이상 배출 및 커리어 멘토링",
+            "현대중공업, 한솔그룹 등 주요 기업 대상 AI 활용 및 AX(AI 전환) 교육 진행",
+            "프로그래머스, 해커스 HRD 등 다양한 기관에서의 온라인 강의 진행",
+            "정보통신연합회 비전공자를 위한 현실적인 개발자 취업 가이드 특강",
+            "정보통신연합회 한이음 드림업 멘토 및 자문위원"
           ].map((item) => (
-            <li class="flex items-start gap-4 group">
-              <span class="mt-1.5 w-2 h-2 rounded-full border-2 border-blue-400 flex-shrink-0 group-hover:bg-blue-400 transition-colors"></span>
-              <div>
-                <div class="flex items-start gap-2 flex-wrap">
-                  <p class="text-sm font-semibold text-gray-900">{item.title}</p>
-                  <span class="text-[0.65rem] px-2 py-0.5 bg-blue-50 text-blue-700 rounded-full font-semibold flex-shrink-0">{item.tag}</span>
-                </div>
-                <p class="text-xs text-gray-500 mt-1 leading-relaxed">{item.desc}</p>
-              </div>
+            <li class="flex items-start gap-3">
+              <span class="mt-[0.4rem] w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+              <p class="text-sm text-gray-700 leading-relaxed">{item}</p>
             </li>
           ))}
         </ul>
