@@ -10,63 +10,67 @@ import bgPhoto from '../assets/bg.jpg';
   description="복잡한 코딩과 낯선 AI를 일상의 다정한 대화로 풀어내는 IT 교육 전문가 최지원 강사. Java, Python, 생성형 AI, AX 교육, 기업 특강 전문."
 >
 
-  <!-- ===== NAVIGATION ===== -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-    <div class="max-w-5xl mx-auto px-6 lg:px-8 h-14 flex items-center justify-between">
-      <span class="text-sm font-semibold text-gray-900 tracking-tight">최지원 강사</span>
-      <div class="hidden md:flex items-center gap-7 text-sm text-gray-500">
-        <a href="#about" class="hover:text-gray-900 transition-colors">소개</a>
-        <a href="#teaching" class="hover:text-gray-900 transition-colors">강의 분야</a>
-        <a href="#career" class="hover:text-gray-900 transition-colors">경력</a>
-        <a href="#certifications" class="hover:text-gray-900 transition-colors">자격</a>
+  <!-- ===== NAVIGATION (fixed, scroll-aware) ===== -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <!-- Background panel (hidden over cover, shown when scrolled) -->
+    <div id="nav-bg" class="absolute inset-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 opacity-0 transition-opacity duration-300"></div>
+    <!-- Top gradient for legibility over cover image -->
+    <div id="nav-gradient" class="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent pointer-events-none transition-opacity duration-300"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6 lg:px-8 h-14 flex items-center justify-between">
+      <span id="nav-logo" class="text-sm font-semibold tracking-tight text-white transition-colors duration-300">최지원 강사</span>
+      <div class="hidden md:flex items-center gap-7 text-sm">
+        <a href="#about"          id="nav-link-1" class="nav-link text-white/90 hover:text-white transition-colors duration-300">소개</a>
+        <a href="#teaching"       id="nav-link-2" class="nav-link text-white/90 hover:text-white transition-colors duration-300">강의 분야</a>
+        <a href="#career"         id="nav-link-3" class="nav-link text-white/90 hover:text-white transition-colors duration-300">경력</a>
+        <a href="#certifications" id="nav-link-4" class="nav-link text-white/90 hover:text-white transition-colors duration-300">자격</a>
       </div>
       <a
         href="mailto:one@oneground.ai.kr"
-        class="text-sm px-4 py-1.5 bg-gray-900 hover:bg-gray-700 text-white rounded-full transition-colors font-medium"
+        id="nav-cta"
+        class="text-sm px-4 py-1.5 rounded-full transition-all duration-300 font-medium border border-white/60 text-white hover:bg-white/20"
       >
         강의 문의
       </a>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <section id="hero" class="relative overflow-hidden">
-    <!-- Blurred background image -->
-    <div class="absolute inset-0 z-0">
-      <Image
-        src={bgPhoto}
-        alt=""
-        class="w-full h-full object-cover scale-105"
-        width={1400}
-        height={600}
-        quality={70}
-        aria-hidden="true"
-      />
-      <!-- White wash overlay: keeps white theme, makes bg subtle -->
-      <div class="absolute inset-0 bg-white/82 backdrop-blur-[6px]"></div>
-      <!-- Fade to white at bottom -->
-      <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
-    </div>
+  <!-- ===== COVER IMAGE (full-width, top of page) ===== -->
+  <div id="cover" class="relative w-full overflow-hidden" style="height: clamp(200px, 38vw, 360px);">
+    <Image
+      src={bgPhoto}
+      alt="최지원 강사 강의 현장"
+      class="w-full h-full object-cover object-center"
+      width={1400}
+      height={560}
+      quality={80}
+    />
+    <!-- subtle dark vignette at top for nav legibility -->
+    <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/30 to-transparent pointer-events-none"></div>
+    <!-- soft fade to white at bottom -->
+    <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
+  </div>
 
-    <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 pt-16 pb-20 lg:pt-24 lg:pb-28">
-    <div class="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
+  <!-- ===== HERO CONTENT ===== -->
+  <section id="hero" class="max-w-5xl mx-auto px-6 lg:px-8 pb-16 lg:pb-24">
+    <div class="flex flex-col lg:flex-row items-start gap-10 lg:gap-20">
 
-      <!-- Profile Image -->
-      <div class="flex-shrink-0 mx-auto lg:mx-0">
-        <div class="relative w-44 h-44 sm:w-52 sm:h-52 rounded-2xl overflow-hidden ring-1 ring-gray-200 shadow-md bg-white">
+      <!-- Profile Image — overlaps cover bottom -->
+      <div class="flex-shrink-0 mx-auto lg:mx-0 -mt-14 sm:-mt-16">
+        <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden ring-3 ring-white shadow-lg bg-white">
           <Image
             src={profilePhoto}
             alt="최지원 강사 프로필 사진"
             class="w-full h-full object-cover object-center"
-            width={208}
-            height={208}
+            width={144}
+            height={144}
             quality={90}
           />
         </div>
       </div>
 
       <!-- Text Content -->
-      <div class="flex-1">
+      <div class="flex-1 pt-4 lg:pt-6">
         <div class="mb-5">
           <p class="text-xs font-semibold text-teal-600 tracking-widest uppercase mb-3">지식 전달자</p>
           <h1 class="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold text-gray-900 leading-snug tracking-tight mb-4">
@@ -143,7 +147,6 @@ import bgPhoto from '../assets/bg.jpg';
         </div>
       </div>
 
-    </div>
     </div>
   </section>
 
@@ -531,11 +534,51 @@ import bgPhoto from '../assets/bg.jpg';
 </Layout>
 
 <style>
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
   ::-webkit-scrollbar { width: 5px; }
   ::-webkit-scrollbar-track { background: #f9fafb; }
   ::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 9999px; }
   ::-webkit-scrollbar-thumb:hover { background: #d1d5db; }
 </style>
+
+<script>
+  const cover = document.getElementById('cover');
+  const navBg = document.getElementById('nav-bg');
+  const navGradient = document.getElementById('nav-gradient');
+  const navLogo = document.getElementById('nav-logo');
+  const navCta = document.getElementById('nav-cta');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function onScroll() {
+    const coverBottom = cover ? cover.getBoundingClientRect().bottom : 0;
+    const scrolled = coverBottom <= 56; // nav height
+
+    // Background panel
+    navBg!.style.opacity = scrolled ? '1' : '0';
+    // Top gradient (only over cover)
+    navGradient!.style.opacity = scrolled ? '0' : '1';
+
+    // Logo color
+    (navLogo as HTMLElement).style.color = scrolled ? '#111827' : '#ffffff';
+
+    // Nav links color
+    navLinks.forEach(link => {
+      (link as HTMLElement).style.color = scrolled ? '#6b7280' : 'rgba(255,255,255,0.9)';
+    });
+
+    // CTA button style
+    const cta = navCta as HTMLElement;
+    if (scrolled) {
+      cta.style.background = '#111827';
+      cta.style.color = '#ffffff';
+      cta.style.border = '1px solid #111827';
+    } else {
+      cta.style.background = 'transparent';
+      cta.style.color = '#ffffff';
+      cta.style.border = '1px solid rgba(255,255,255,0.6)';
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // run on load
+</script>
