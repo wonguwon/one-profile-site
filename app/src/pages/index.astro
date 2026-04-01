@@ -360,10 +360,9 @@ import bgPhoto from '../assets/bg.jpg';
         <ul class="space-y-1">
           {[
             { title: "KDT 국가기간전략산업훈련 교강사",            desc: "7개 과정 운영, 교강사 평점 평균 4.8점 이상 (2023~2026)",           tag: "KDT" },
-            { title: "수료생 120명+ 배출 및 멘토링",               desc: "IT 전공 및 비전공 수료생 커리어 멘토링",                            tag: "멘토링" },
-            { title: "현대중공업 · 포스코DX · 한솔그룹 특강",     desc: "주요 기업 대상 AI 활용 및 AX(AI 전환) 교육 진행",                   tag: "기업특강" },
-            { title: "프로그래머스 · 해커스 HRD 강사",             desc: "다양한 기관에서의 온라인 강의 진행",                               tag: "플랫폼" },
-            { title: "정보통신연합회 취업 가이드 특강",             desc: "비전공자를 위한 현실적인 개발자 취업 가이드",                       tag: "특강" },
+            { title: "주요 기업 대상 AI 활용 및 AX(AI 전환) 교육 진행",     desc: "현대중공업 · 포스코DX · 한솔그룹등 주요기업 강의",                   tag: "기업특강" },
+            { title: "다양한 기관에서의 온라인 강의 진행",             desc: "프로그래머스 · 해커스 HRD등 온라인 교육 협업",                               tag: "플랫폼" },
+            { title: "정보통신연합회 취업 가이드 특강",             desc: "비전공자를 위한 현실적인 개발자 취업 가이드 특강",                       tag: "특강" },
             { title: "한이음 드림업 멘토 · 자문위원",              desc: "정보통신연합회 한이음 드림업 멘토 및 자문위원",                      tag: "자문" }
           ].map((item) => (
             <li class="flex items-start gap-4 px-3 py-3 rounded-lg hover:bg-gray-50 transition-colors group">
@@ -434,6 +433,14 @@ import bgPhoto from '../assets/bg.jpg';
           accent: "text-cyan-600",
           bg: "bg-cyan-50",
           border: "border-cyan-100"
+        },
+        {
+          name: "NVIDIA DLI — Mastering LLM Optimization",
+          sub: "RAG & Prompt Engineering · Building LLM Applications · Techniques for Improving RAG Systems",
+          category: "NVIDIA DLI",
+          accent: "text-green-700",
+          bg: "bg-green-50",
+          border: "border-green-100"
         }
       ].map((cert) => (
         <div class={`flex items-start gap-4 p-5 rounded-xl border ${cert.border} ${cert.bg}`}>
