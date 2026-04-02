@@ -2,7 +2,7 @@
 
 IT·AI·AX 교육 전문가 최지원 강사의 개인 소개 및 강의 의뢰 랜딩 페이지.
 
-**라이브:** [one-profile.wonguwon25.workers.dev](https://one-profile.wonguwon25.workers.dev)
+**라이브:** [edu.oneground.ai.kr](https://edu.oneground.ai.kr)
 
 ---
 
